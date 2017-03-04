@@ -9,20 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     @IBOutlet weak var display: UILabel!
     var userIsInTheMiddleOfTyping : Bool = false
-
-
+    
+    
     @IBAction func touchDigit(_ sender: UIButton)
     {
         //let digit = sender.currentTitle
@@ -32,8 +32,8 @@ class ViewController: UIViewController {
         
         if userIsInTheMiddleOfTyping
         {
-        let textCurrentlyInDisplay = display.text!
-        display.text = textCurrentlyInDisplay + digit
+            let textCurrentlyInDisplay = display.text!
+            display.text = textCurrentlyInDisplay + digit
         }
         else{
             display.text = digit
@@ -41,13 +41,42 @@ class ViewController: UIViewController {
         userIsInTheMiddleOfTyping = true
         
     }
-    @IBAction func performOperation(_ sender: UIButton) {
-        userIsInTheMiddleOfTyping = false
-        let mathmaticalSymbole = sender.currentTitle!
-        if mathmaticalSymbole == "π"{
-            display.text = String(M_PI)
+    private var brain: CalculatorBrain = CalculatorBrain()
+    
+    @IBAction func performOperation(_ sender: UIButton)
+    {
+        if userIsInTheMiddleOfTyping{
+            brain.setOperand(operand: displyValue)
+            userIsInTheMiddleOfTyping = false
+
         }
         
+        if let mathmaticalSymbole = sender.currentTitle{
+            brain.performOperation(symbol: mathmaticalSymbole)
+        }
+        displyValue = brain.result
+        
+//        if mathmaticalSymbole == "π"{
+//            displyValue = M_PI
+//        }
+//        else if mathmaticalSymbole == "√"{
+//            displyValue = sqrt(displyValue)
+//        }
+        
+    }
+    
+    //properties
+    var displyValue : Double{
+        get
+        {
+            // add ! at the end using a optional double variable, because
+            // display.text! can be a string can not be convert to double
+            return Double(display.text!)!
+        }
+        set
+        {
+            display.text = String(newValue)
+        }
     }
 }
 

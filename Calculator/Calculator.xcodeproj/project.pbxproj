@@ -12,6 +12,7 @@
 		6B1D37A71E6A424700E9B0A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1D37A51E6A424700E9B0A8 /* Main.storyboard */; };
 		6B1D37A91E6A424700E9B0A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B1D37A81E6A424700E9B0A8 /* Assets.xcassets */; };
 		6B1D37AC1E6A424700E9B0A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1D37AA1E6A424700E9B0A8 /* LaunchScreen.storyboard */; };
+		6BBC1D911E6A68FE00E2ED7B /* CalculatorBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBC1D901E6A68FE00E2ED7B /* CalculatorBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6B1D37A81E6A424700E9B0A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B1D37AB1E6A424700E9B0A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B1D37AD1E6A424700E9B0A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BBC1D901E6A68FE00E2ED7B /* CalculatorBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				6B1D37B31E6A437400E9B0A8 /* Supporting Files */,
 				6B1D37A31E6A424700E9B0A8 /* ViewController.swift */,
 				6B1D37A51E6A424700E9B0A8 /* Main.storyboard */,
+				6BBC1D901E6A68FE00E2ED7B /* CalculatorBrain.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BBC1D911E6A68FE00E2ED7B /* CalculatorBrain.swift in Sources */,
 				6B1D37A41E6A424700E9B0A8 /* ViewController.swift in Sources */,
 				6B1D37A21E6A424700E9B0A8 /* AppDelegate.swift in Sources */,
 			);
