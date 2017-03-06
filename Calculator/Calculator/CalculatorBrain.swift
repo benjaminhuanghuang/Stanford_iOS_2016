@@ -35,7 +35,7 @@ internal class CalculatorBrain
         
         "+": Operation.BinaryOperation({(op1, op2) in return op1 + op2}),
         "−": Operation.BinaryOperation({return $0 - $1}),
-        "x": Operation.BinaryOperation(multiply),
+        "×": Operation.BinaryOperation(multiply),
         "÷": Operation.BinaryOperation({$0 / $1}),
         "=": Operation.Equals
     ]
